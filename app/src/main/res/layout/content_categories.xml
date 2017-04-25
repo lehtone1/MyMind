@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+    
+            <Button
+                android:id="@+id/categories_fashion_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        
+            <Button
+                android:id="@+id/categories_science_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        
+            <Button
+                android:id="@+id/categories_auto_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        
+            <Button
+                android:id="@+id/categoreis_technology_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        
+            <Button
+                android:id="@+id/categories_entertainment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        
+            <Button
+                android:id="@+id/categories_environment_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            
+            <Button
+                android:id="@+id/categories_finances_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/categories_travel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
