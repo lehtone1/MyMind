@@ -17,16 +17,10 @@ public class BaseActivity extends AppCompatActivity {
     protected MyMindApplication application;
 
     @Override
-    public void onCreate(Bundle savedState) {
+    protected void onCreate(Bundle savedState) {
         super.onCreate(savedState);
 
         application = (MyMindApplication) getApplication();
     }
 
-    public static void addFragmentToActivity (@NonNull FragmentManager fragmentManager,
-                                              @NonNull Fragment fragment, int frameId) {
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.add(frameId, fragment);
-        transaction.commit();
-    }
 }
