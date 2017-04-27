@@ -13,6 +13,7 @@
         "followers" : 0,
         "articles" : [
             {
+                "id" : 1001,
                 "header" : "Artic sea ice hits record low for winter maximum", 
                 "text" : ["According to the National Oceanic and Atmospheric Administration, Ted Scambos, NSIDC lead scientist, puts the potentially record low maximum sea ice extent this year down to low ice extent in the Pacific and a late drop in ice extent in the Barents Sea.",
                           "So what does this new record for the lowest level of winter ice actually mean?",
@@ -22,6 +23,7 @@
             },
 
             {
+                "id" : 1002,
                 "header" : "Archealogists discovered lost city in Honduran jungle", 
                 "text" : "",
                 "source" :"CNN",
@@ -29,6 +31,7 @@
             },
 
             {
+                "id" : 1003,
                 "header" : "The balloons that could fly tourists to the edge of space", 
                 "text" : "",
                 "source" :"CNN",
@@ -36,6 +39,7 @@
             },
 
             {
+                "id" : 1004,
                 "header" : "In The Prawn Nebula, aNursery for Newbord Stars", 
                 "text" : "",
                 "source" :"The New York Times",
@@ -43,6 +47,7 @@
             },
 
             {
+                "id" : 1005,
                 "header" : "What will the battleships of the Future look like?", 
                 "text" : "",
                 "source" :"Popular Science",

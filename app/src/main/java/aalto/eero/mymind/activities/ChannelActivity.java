@@ -71,6 +71,7 @@ public class ChannelActivity extends BaseActivity implements View.OnClickListene
             JSONArray jsonArray;
             List<String> list;
             channelNewsLayout = (LinearLayout) findViewById(R.id.channel_news);
+            int article_id = 0;
 
             jsonArray = obj.getJSONObject("Science").getJSONArray("articles");
 
@@ -92,6 +93,9 @@ public class ChannelActivity extends BaseActivity implements View.OnClickListene
 
                 TextView time = (TextView) articlePreview.findViewById(R.id.preview_time);
                 time.setText(jsonArray.getJSONObject(i).getString("time"));
+
+                article_id = jsonArray.getJSONObject(i).getInt("id");
+
 
                 articlePreview.setOnClickListener(this);
 
