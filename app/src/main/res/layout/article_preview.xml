@@ -6,36 +6,38 @@
     android:clickable="true">
 
     <TextView
-        android:id="@+id/preview_main_text"
-        android:layout_width="wrap_content"
+        android:id="@+id/preview_header"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"/>
 
     <ImageView
-        android:id="@+id/preview_channel_image"
+        android:id="@+id/preview_source_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/preview_header"
         android:layout_alignParentLeft="true"
         android:src="@drawable/icon_list_source"/>
     <TextView
-        android:id="@+id/preview_channel"
+        android:id="@+id/preview_source"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/preview_channel_image"/>
+        android:layout_below="@+id/preview_header"
+        android:layout_toRightOf="@id/preview_source_image"/>
 
     <ImageView
         android:id="@+id/prevew_time_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/preview_channel"
+        android:layout_below="@+id/preview_header"
+        android:layout_toRightOf="@id/preview_source"
         android:src="@drawable/icon_list_time"/>
 
     <TextView
         android:id="@+id/preview_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/preview_header"
         android:layout_toRightOf="@id/prevew_time_image"/>
 
 

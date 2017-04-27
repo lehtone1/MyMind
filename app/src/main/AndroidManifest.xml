@@ -22,6 +22,7 @@
         <activity
             android:name=".activities.ChannelActivity"
             android:screenOrientation="portrait"></activity>
+        <activity android:name=".activities.ArticleActivity"></activity>
     </application>
 
 </manifest>
