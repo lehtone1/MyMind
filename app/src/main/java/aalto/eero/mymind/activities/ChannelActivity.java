@@ -1,7 +1,22 @@
 package aalto.eero.mymind.activities;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
 import aalto.eero.mymind.R;
 
@@ -11,6 +26,8 @@ import aalto.eero.mymind.R;
 
 public class ChannelActivity extends BaseActivity {
     private Toolbar toolbar;
+    private LinearLayout channelNewsLayout;
+    private RelativeLayout articlePreview;
 
     @Override
     protected void onCreate(Bundle savedState) {
@@ -20,5 +37,60 @@ public class ChannelActivity extends BaseActivity {
 
         toolbar = (Toolbar) findViewById(R.id.main_app_bar);
         setSupportActionBar(toolbar);
+        getChannelsFromJson();
+
     }
+
+    private String loadJSONFromAsset() {
+        String json = null;
+        try {
+            InputStream is = getAssets().open("channelsAndContent.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
+    }
+
+
+
+    private void getChannelsFromJson() {
+        try {
+            JSONObject obj = new JSONObject(loadJSONFromAsset());
+            Iterator<String> iterator = obj.keys();
+            //ArrayAdapter<String> adapter;
+            List<String> list;
+            channelNewsLayout = (LinearLayout) findViewById(R.id.channel_news);
+
+            LayoutInflater inflater = (LayoutInflater) this.getSystemService
+                    (Context.LAYOUT_INFLATER_SERVICE);
+
+            list = new ArrayList<String>();
+            while (iterator.hasNext()) {
+                list.add(iterator.next());
+                articlePreview = (RelativeLayout) inflater.inflate(R.layout.article_preview, null);
+                channelNewsLayout.addView(articlePreview);
+
+            }
+
+/*
+            adapter = new ArrayAdapter<String>(
+                    this.getActivity(), android.R.layout.simple_spinner_item, list);
+
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            registerCountrySpin.setAdapter(adapter);
+*/
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }

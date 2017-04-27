@@ -1,0 +1,101 @@
+{ 
+    
+
+   "Fashion" : {
+        "name" : "Fashion",
+        "followers" : 0,
+        "articles" : []
+
+    },
+
+    "Science" : {
+        "name" : "Science",
+        "followers" : 0,
+        "articles" : [
+            {
+                "header" : "Artic sea ice hits record low for winter maximum", 
+                "text" : ["According to the National Oceanic and Atmospheric Administration, Ted Scambos, NSIDC lead scientist, puts the potentially record low maximum sea ice extent this year down to low ice extent in the Pacific and a late drop in ice extent in the Barents Sea.",
+                          "So what does this new record for the lowest level of winter ice actually mean?",
+                          "The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world. It will always be plunged into bitterly cold polar dark every winter. And year-by year, for all kinds of natural reasons there's huge variet of the state of the ice."],
+                "source" :"CNN",
+                "time" : "Apr 3, 2015"
+            },
+
+            {
+                "header" : "Archealogists discovered lost city in Honduran jungle", 
+                "text" : "",
+                "source" :"CNN",
+                "time" : "Apr 3, 2015"
+            },
+
+            {
+                "header" : "The balloons that could fly tourists to the edge of space", 
+                "text" : "",
+                "source" :"CNN",
+                "time" : "Apr 1, 2015"
+            },
+
+            {
+                "header" : "In The Prawn Nebula, aNursery for Newbord Stars", 
+                "text" : "",
+                "source" :"The New York Times",
+                "time" : "March 30, 2015"
+            },
+
+            {
+                "header" : "What will the battleships of the Future look like?", 
+                "text" : "",
+                "source" :"Popular Science",
+                "time" : "Apr 1, 2015"
+            }
+
+
+        ]
+
+    },
+    
+    "Auto" : {
+        "name" : "Auto",
+        "followers" : 0,
+        "articles" : []
+
+    },
+    
+    "Technology" : {
+        "name" : "Technoloy",
+        "followers" : 0,
+        "articles" : []
+
+    },
+    
+    "Entertainment" : {
+        "name" : "Entertainment",
+        "followers" : 0,
+        "articles" : []
+
+    },
+    
+    "Environment" : {
+        "name" : "Environment",
+        "followers" : 0,
+        "articles" : []
+
+    },
+    
+    "Finance" : {
+        "name" : "Finance",
+        "followers" : 0,
+        "articles" : []
+
+    },
+    
+    "Travel" : {
+        "name" : "Travel",
+        "followers" : 0,
+        "articles" : []
+
+    }
+
+
+
+}

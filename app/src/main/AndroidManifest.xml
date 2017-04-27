@@ -11,14 +11,17 @@
         android:theme="@style/AppTheme"
         android:name=".infrastructure.MyMindApplication">
         <activity
-            android:name=".activities.MainActivity">
+            android:name=".activities.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name=".activities.BaseActivity"></activity>
-        <activity android:name=".activities.ChannelActivity"></activity>
+        <activity
+            android:name=".activities.ChannelActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

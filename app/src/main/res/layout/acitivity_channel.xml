@@ -13,5 +13,21 @@
         layout="@layout/channel_header"
         android:id="@+id/channel_header"/>
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/channel_news"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
 
 </LinearLayout>

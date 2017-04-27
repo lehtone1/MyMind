@@ -13,6 +13,7 @@ public class MainActivity extends BaseActivity {
     private Toolbar toolbar;
     private Button scienceButton;
     private Intent nextIntent;
+    private String CHANNEL = "CHANNEl";
 
     @Override
     protected void onCreate(Bundle savedState) {
@@ -29,7 +30,9 @@ public class MainActivity extends BaseActivity {
         scienceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                nextIntent.putExtra(CHANNEL, "Science");
                 startActivity(nextIntent);
+
 
             }
         });
