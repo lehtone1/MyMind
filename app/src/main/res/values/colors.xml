@@ -3,4 +3,6 @@
     <color name="colorPrimary">#1D3255</color>
     <color name="colorPrimaryDark">#9766B6</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="followButtonColor">#DD6E95</color>
+    <color name="textColor">#2C2C2C</color>
 </resources>

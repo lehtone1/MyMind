@@ -3,13 +3,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:clickable="true">
+    android:clickable="true"
+    android:paddingBottom="20dp">
 
     <TextView
         android:id="@+id/preview_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"/>
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/textColor"
+        android:lineSpacingExtra="5dp"/>
 
     <ImageView
         android:id="@+id/preview_source_image"
@@ -17,13 +23,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/preview_header"
         android:layout_alignParentLeft="true"
+        android:paddingRight="5dp"
+        android:paddingLeft="15dp"
         android:src="@drawable/icon_list_source"/>
     <TextView
         android:id="@+id/preview_source"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/preview_header"
-        android:layout_toRightOf="@id/preview_source_image"/>
+        android:paddingRight="10dp"
+        android:layout_toRightOf="@id/preview_source_image"
+        android:textSize="10sp"
+        android:textColor="@color/textColor"/>
 
     <ImageView
         android:id="@+id/prevew_time_image"
@@ -31,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/preview_header"
         android:layout_toRightOf="@id/preview_source"
+        android:paddingRight="5dp"
         android:src="@drawable/icon_list_time"/>
 
     <TextView
@@ -38,7 +50,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/preview_header"
-        android:layout_toRightOf="@id/prevew_time_image"/>
+        android:layout_toRightOf="@id/prevew_time_image"
+        android:textSize="10sp"
+        android:textColor="@color/textColor"/>
 
 
 </RelativeLayout>

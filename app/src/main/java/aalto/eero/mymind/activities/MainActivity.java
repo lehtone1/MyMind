@@ -25,7 +25,7 @@ import aalto.eero.mymind.R;
 
 public class MainActivity extends BaseActivity {
     private Toolbar toolbar;
-    private Button scienceButton;
+    private LinearLayout scienceButton;
     private Intent nextIntent;
     private String CHANNEL = "CHANNEl";
 
@@ -37,8 +37,10 @@ public class MainActivity extends BaseActivity {
 
         toolbar = (Toolbar) findViewById(R.id.main_app_bar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        scienceButton = (Button) findViewById(R.id.main_science_button);
+
+        scienceButton = (LinearLayout) findViewById(R.id.main_science_button);
         nextIntent = new Intent(this, ChannelActivity.class);
 
         scienceButton.setOnClickListener(new View.OnClickListener() {

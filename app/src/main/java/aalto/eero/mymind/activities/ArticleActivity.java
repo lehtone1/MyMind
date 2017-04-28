@@ -1,8 +1,12 @@
 package aalto.eero.mymind.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -20,13 +24,19 @@ import aalto.eero.mymind.R;
  * Created by lehtone1 on 24/04/17.
  */
 
-public class ArticleActivity extends BaseActivity {
+public class ArticleActivity extends BaseActivity implements View.OnClickListener {
     private TextView header;
     private TextView source;
     private TextView time;
     private TextView chapter;
+    private TextView channel;
+    private TextView toolbarChannelName;
     private int id;
     private LinearLayout textContainer;
+    private Toolbar toolbar;
+    private ImageView toolbarImageX;
+    private Intent previousIntent;
+
 
 
     @Override
@@ -39,6 +49,17 @@ public class ArticleActivity extends BaseActivity {
         source = (TextView) findViewById(R.id.article_source_text);
         time = (TextView) findViewById(R.id.article_time_text);
         textContainer = (LinearLayout) findViewById(R.id.article_text_container);
+        channel = (TextView) findViewById(R.id.article_channel_name);
+        toolbar = (Toolbar) findViewById(R.id.top_bar_article);
+        toolbarImageX = (ImageView) toolbar.findViewById(R.id.top_bar_article_image_x);
+        toolbarChannelName = (TextView) toolbar.findViewById(R.id.top_bar_article_channel_name);
+        previousIntent = new Intent(this, ChannelActivity.class);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+
+        toolbarImageX.setOnClickListener(this);
 
         Bundle extra = getIntent().getExtras();
         if(extra != null) {
@@ -83,6 +104,8 @@ public class ArticleActivity extends BaseActivity {
                     source.setText(jsonArray.getJSONObject(i).getString("source"));
                     header.setText(jsonArray.getJSONObject(i).getString("header"));
                     time.setText(jsonArray.getJSONObject(i).getString("time"));
+                    channel.setText("Science");
+                    toolbarChannelName.setText("SCIENCE CHANNEL");
 
                     JSONArray text = jsonArray.getJSONObject(i).getJSONArray("text");
 
@@ -118,5 +141,12 @@ public class ArticleActivity extends BaseActivity {
     }
 
 
+    @Override
+    public void onClick(View v) {
+        previousIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(previousIntent);
+        finish();
+
+    }
 }
 

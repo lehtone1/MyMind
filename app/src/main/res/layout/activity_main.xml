@@ -9,7 +9,7 @@
     android:id="@+id/contentLayout">
 
     <include
-        layout="@layout/app_bar"
+        layout="@layout/top_bar_main"
         android:id="@+id/main_app_bar"/>
 
 
@@ -33,25 +33,46 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
+                <LinearLayout
                     android:id="@+id/main_fashion_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/thumbnail_channel_fashion"
-                    android:text="Fashion"
-                    android:textColor="#FFFFFF"
-                    android:gravity="bottom"
-                    android:layout_weight="1"/>
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="bottom">
 
-                <Button
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fashion"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:id="@+id/main_science_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/thumbnail_channel_science"
-                    android:text="Science"
-                    android:textColor="#FFFFFF"
-                    android:gravity="bottom"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Science"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp" />
+
+
+                </LinearLayout>
+
 
 
             </LinearLayout>
@@ -61,25 +82,42 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
+                <LinearLayout
                     android:id="@+id/main_auto_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/thumbnail_channel_auto"
-                    android:text="Auto"
-                    android:textColor="#FFFFFF"
-                    android:gravity="bottom"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:gravity="bottom">
 
-                <Button
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Auto"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp"/>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:id="@+id/main_technology_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/thumbnail_channel_technology"
-                    android:text="Technology"
-                    android:textColor="#FFFFFF"
-                    android:gravity="bottom"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:gravity="bottom">
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Technology"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp"/>
+
+                </LinearLayout>
+
 
             </LinearLayout>
 
@@ -88,25 +126,40 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
+                <LinearLayout
                     android:id="@+id/main_entertainment_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/thumbnail_channel_entertainment"
-                    android:text="Entertainment"
-                    android:textColor="#FFFFFF"
-                    android:gravity="bottom"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:gravity="bottom">
 
-                <Button
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Entertainment"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/main_environment_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/thumbnail_channel_environment"
-                    android:text="Environment"
-                    android:textColor="#FFFFFF"
-                    android:gravity="bottom"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:gravity="bottom">
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Environment"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp"/>
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -115,25 +168,39 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
+                <LinearLayout
                     android:id="@+id/main_finances_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/thumbnail_channel_finance"
-                    android:text="Finance"
-                    android:textColor="#FFFFFF"
-                    android:gravity="bottom"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:gravity="bottom">
 
-                <Button
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Finance"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp"/>
+                </LinearLayout>
+
+                <LinearLayout
                     android:id="@+id/main_travel_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/thumbnail_channel_travel"
-                    android:text="Travel"
-                    android:textColor="#FFFFFF"
-                    android:gravity="bottom"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:gravity="bottom">
+
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Travel"
+                        android:textColor="#FFFFFF"
+                        android:padding="10dp"/>
+                </LinearLayout>
 
             </LinearLayout>
 
