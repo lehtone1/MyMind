@@ -26,7 +26,8 @@
         <ImageView
             android:id="@+id/article_source_image"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_list_source"/>
 
         <TextView
             android:id="@+id/article_source_text"
@@ -36,7 +37,8 @@
         <ImageView
             android:id="@+id/article_time_image"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_list_time"/>
 
         <TextView
             android:id="@+id/article_time_text"
@@ -57,11 +59,10 @@
         android:layout_height="wrap_content">
 
         <LinearLayout
+            android:id="@+id/article_text_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-
         </LinearLayout>
     </ScrollView>
 

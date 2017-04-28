@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -31,8 +33,10 @@ import aalto.eero.mymind.R;
 
 public class ChannelActivity extends BaseActivity implements View.OnClickListener {
     private Toolbar toolbar;
-    private LinearLayout channelNewsLayout;
+    private LinearLayout channelNewsList;
     private RelativeLayout articlePreview;
+    private Intent nextIntent;
+
 
     @Override
     protected void onCreate(Bundle savedState) {
@@ -42,6 +46,9 @@ public class ChannelActivity extends BaseActivity implements View.OnClickListene
 
         toolbar = (Toolbar) findViewById(R.id.main_app_bar);
         setSupportActionBar(toolbar);
+
+        nextIntent = new Intent(this, ArticleActivity.class);
+
         getChannelsFromJson();
 
     }
@@ -69,21 +76,17 @@ public class ChannelActivity extends BaseActivity implements View.OnClickListene
             JSONObject obj = new JSONObject(loadJSONFromAsset());
 
             JSONArray jsonArray;
-            List<String> list;
-            channelNewsLayout = (LinearLayout) findViewById(R.id.channel_news);
-            int article_id = 0;
+            channelNewsList = (LinearLayout) findViewById(R.id.channel_news);
 
             jsonArray = obj.getJSONObject("Science").getJSONArray("articles");
 
             LayoutInflater inflater = (LayoutInflater) this.getSystemService
                     (Context.LAYOUT_INFLATER_SERVICE);
 
-            list = new ArrayList<String>();
-            //System.out.println(jsonArray.length());
             for(int i = 0; i < jsonArray.length(); i ++) {
                 //list.add(iterator.next());
                 articlePreview = (RelativeLayout) inflater.inflate(R.layout.article_preview, null);
-                channelNewsLayout.addView(articlePreview);
+                channelNewsList.addView(articlePreview);
 
                 TextView channel = (TextView) articlePreview.findViewById(R.id.preview_source);
                 channel.setText(jsonArray.getJSONObject(i).getString("source"));
@@ -94,21 +97,13 @@ public class ChannelActivity extends BaseActivity implements View.OnClickListene
                 TextView time = (TextView) articlePreview.findViewById(R.id.preview_time);
                 time.setText(jsonArray.getJSONObject(i).getString("time"));
 
-                article_id = jsonArray.getJSONObject(i).getInt("id");
-
-
-                articlePreview.setOnClickListener(this);
+                if(i == 0){
+                    articlePreview.setOnClickListener(this);
+                }
 
 
             }
 
-/*
-            adapter = new ArrayAdapter<String>(
-                    this.getActivity(), android.R.layout.simple_spinner_item, list);
-
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            registerCountrySpin.setAdapter(adapter);
-*/
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -118,10 +113,8 @@ public class ChannelActivity extends BaseActivity implements View.OnClickListene
 
 
     @Override
-    public void onClick(View view) {
-        Intent intent = new Intent(this, ArticleActivity.class);
-        startActivity(intent);
-
-
+    public void onClick(View v) {
+        nextIntent.putExtra("ID", 1001);
+        startActivity(nextIntent);
     }
 }
